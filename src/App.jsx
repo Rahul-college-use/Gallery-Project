@@ -7,7 +7,7 @@ const App = () => {
   const [page, setPage] = useState(1)
   const getData = async () => {
     // console.log('clicked')
-    const res = await axios.get(`https://picsum.photos/v2/list?page=${page}&limit=15`)
+    const res = await axios.get(`https://picsum.photos/v2/list?page=${page}&limit=18`)
     // console.log(res.data)
     setData(res.data)
     // console.log(data)
@@ -18,13 +18,13 @@ const App = () => {
     // console.log(page)
   }, [page])
 
-  const error = "Loading..."
 
   return (
     <>
 
       <div className='h-screen'>
-        <h1 className='text-center font-bold text-3xl p-5'>Gallery App</h1>
+        <a href="" title='go to first page'><h1 className='text-center font-bold text-3xl p-5'>Gallery App</h1>
+        </a>
         <div className='flex h-auto flex-wrap justify-between flex-col items-center'>
           {/* <h1 className='absolute fixed p-4 bg-amber-700 font-medium'>{page}</h1> */}
           <div className='flex flex-wrap m-5 justify-center items-center gap-6 overflow-hidden'>
